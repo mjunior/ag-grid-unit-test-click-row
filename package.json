@@ -16,6 +16,8 @@
     "@angular/compiler": "~9.1.13",
     "@angular/core": "~9.1.13",
     "@angular/forms": "~9.1.13",
+    "ag-grid-angular": "^26.2.0",
+    "ag-grid-community": "^26.2.0",
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ag-grid-unit-test-click-row"
+    }
+  },
+  "defaultProject": "ag-grid-unit-test-click-row",
+  "cli": {
+    "analytics": false
+  }
 }

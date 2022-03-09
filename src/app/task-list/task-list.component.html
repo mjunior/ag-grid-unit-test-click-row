@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Tasks list</h1>
+  <hr>
+
+  <ag-grid-angular #agGrid style="width: 100%;"
+      suppressRowClickSelection="true"
+      domLayout="autoHeight"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      (gridReady)="onGridReady()"
+      (rowClicked)="markAsDone($event)">
+    </ag-grid-angular>
+</div>
