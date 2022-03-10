@@ -18,7 +18,7 @@ describe('TaskListComponent', () => {
       providers: [
         TasksListService
       ],
-      declarations: [ TaskListComponent ],
+      declarations: [TaskListComponent],
       imports: [AgGridModule]
     });
 
@@ -52,23 +52,21 @@ describe('TaskListComponent', () => {
       fixture.detectChanges(); // for reflect api data on table
     });
 
-    it ('should render the title', () => {
+    it('should render the title', () => {
       const title = fixture.debugElement.query(By.css('h1'));
       expect(title.nativeElement.textContent.trim()).toEqual('Tasks list')
     });
 
     describe('AND click at line', () => {
-      it('it should call done service api', fakeAsync(() => {
+      it('it should call done service api', (async () => {
         const firstColumn = fixture.debugElement.query(By.css('.ag-cell-value'));
 
         console.log('spec file: clicking');
 
         firstColumn.nativeElement.click();
-        tick(100);
-        flushMicrotasks();
-        flush();
-        fixture.detectChanges();
 
+        fixture.detectChanges();
+        await fixture.whenStable()
         console.log('spec file: expect to check if modal opens');
         expect(spyDoneTasks).toHaveBeenCalled();
       }));
